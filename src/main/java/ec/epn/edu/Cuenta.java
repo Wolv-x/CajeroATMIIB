@@ -33,8 +33,8 @@ public class Cuenta {
                 return retorno;
             } else {
                 cuenta.replace(numeroTarjeta, saldoResultante);
-                retorno = "Se ha retirado: " + dinero + "$.";
-                retorno += "\nSaldo restante: " + saldoResultante;
+                retorno = "Se ha retirado: $. " + dinero;
+                retorno += "\nSaldo restante: $. " + saldoResultante;
                 return retorno;
             }
         } catch (NumberFormatException e) {

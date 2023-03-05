@@ -2,9 +2,11 @@ package ec.epn.edu;
 
 public class Menu {
     private Teclado ingreso;
+
     public Menu() {
         this.ingreso = new Teclado();
     }
+
     public void iniciarMenu(Cuenta cuenta, Tarjeta tarjeta) {
         ingreso = new Teclado();
         System.out.println("Ingrese su número de tarjeta: ");
@@ -22,9 +24,14 @@ public class Menu {
 
                 if (Teclado.isNumeric(opc)) {
                     switch (Integer.parseInt(opc)) {
-                        case 1 -> System.out.println(cuenta.retirarDinero(numero));
-                        case 4 -> System.out.println("\tGracias por usar nuestros servicios");
-                        default -> System.out.println("Ingrese una opcion valida");
+                        case 1:
+                            System.out.println(cuenta.retirarDinero(numero));
+                        case 2:
+                            System.out.println("\tGracias por usar nuestros servicios");
+                            System.exit(0);
+                            break;
+                        default:
+                            System.out.println("Ingrese una opcion valida");
                     }
                 }
             } while (Integer.parseInt(opc) != 4);
