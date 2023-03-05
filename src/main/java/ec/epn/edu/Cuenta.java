@@ -27,7 +27,6 @@ public class Cuenta {
 
             float saldoResultante = cuenta.get(numeroTarjeta) - dinero;
 
-
             if (saldoResultante < 0) {
                 retorno = "Saldo insuficiente para realizar la transaccion.";
                 return retorno;
@@ -43,8 +42,8 @@ public class Cuenta {
         }
         retorno ="Ha ocurrido un error inesperado, no se pudo realizar la transaccion.";
         return retorno;
-        ///se debe controlar que sean numeros los valores ingresados
-    }
+
+}
 
     public static boolean isFloat(String cadena) {
         try {

@@ -7,9 +7,7 @@ public class Teclado {
         ingreso = new Scanner(System.in);
     }
 
-    /**
-     * @return
-     */
+
     public String getEntrada() {
         return ingreso.next();
     }
@@ -27,7 +25,7 @@ public class Teclado {
             return true;
         } catch (NumberFormatException nfe) {
             System.out.println("INGRESE SOLO NÚMEROS, CERRANDO EL PROGRAMA.....");
-            System.exit(0);
+            //System.exit(0);
             return false;
         }
     }
